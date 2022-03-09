@@ -1,0 +1,22 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "example-webhook"
+spec:
+  template: 
+    metadata:
+      labels:
+        name: "example-webhook"
+    spec:
+      containers:
+        - name: "helloworld"
+          image: "quay.io/rh_ee_jfacchet/quick-experiments"
+          ports:
+            - containerPort: 8443
+              protocol: "TCP"
+  replicas: 1 
+  strategy: 
+    type: "Rolling"
+  paused: false 
+  revisionHistoryLimit: 2 
+  minReadySeconds: 0 

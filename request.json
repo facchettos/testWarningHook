@@ -1,0 +1,32 @@
+{
+    "request":{
+        "object": { 
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                },
+                "generateName": "web-",
+                "labels": {
+                    "app": "nginx",
+                    "controller-revision-hash": "web-76f6485b57",
+                    "statefulset.kubernetes.io/pod-name": "web-0"
+                },
+                "name": "web-0",
+                "namespace": "default"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "k8s.gcr.io/nginx-slim:0.8",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "nginx",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ]
+            }
+        }
+    }
+}
