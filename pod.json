@@ -3,8 +3,7 @@
     "kind": "Pod",
     "metadata": {
         "name": "web-0",
-        "namespace": "default",
+        "namespace": "default"
     },
-    "spec": {
-    },
+    "spec": {}
 }
